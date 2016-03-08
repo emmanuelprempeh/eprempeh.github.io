@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		/* Colors :
+
+		background: #eb6361
+		shadow: #e53634
+
+		*/
+		body{
+			font-family: Arial;
+		}
+		.container{
+			max-width: 980px;
+			margin: auto;
+			text-align: center;
+		}
+		ul{
+			margin: 0 0 20px;
+			padding: 0;
+		}
+		ul li{
+			display: inline;
+		}
+		ul li a{
+			text-decoration: none;
+			display: inline-block;
+			padding: 10px;
+			border-bottom: 4px solid #fff;
+			transition: 0.3s all ease-in;
+		}
+		ul li a:hover{
+			border-bottom: 4px solid #eb6361;
+		}
+		a.btn{
+			display: inline-block;
+			padding: 1em 2em;
+			border-radius: 5px;
+			border: none;
+			color: #f3f2ed;
+			text-align: center;
+			font-family: Consolas;
+			font-size: 1.7rem;
+			line-height: 1;
+			font-weight: 600;
+			text-decoration: none;
+			background-color: #52accc;
+			box-shadow: 0px 6px #4796b3;
+			position: relative;
+		}
+		
+		a.btn:hover{
+			box-shadow: 0px 4px #4796b3;
+			top: 2px;
+		}
+		a.btn:active + .wrap{
+			transform: translate(50px, 10px);
+			transition: 0.5s all ease-in-out;
+		}
+		.me_borderradius .wrap{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: #eb6361;
+			margin: 30px auto;
+			border-radius: 3px;
+		}
+		.wrap:hover{
+			box-shadow: 0px 0px 5px 1px #cdcdcd;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="">Services</a></li>
+			<li><a href="">About</a></li>
+		</ul>
+		<h1>About Page</h1>
+		<a href="#" class="btn">Download Theme</a>
+		<div class="wrap"></div>
+
+		<form id="temperatureForm">
+			<small id="error" style="display: block; color: red"></small>
+		    <label for="temp">Temperature:</label> <input type="text" id="temp" size="3"/> degrees in 
+		    <input type="radio" name="tempFormat" value="F" checked />Fahrenheit 
+		    <input type="radio" name="tempFormat" value="C" />Celsius <br />
+		    <label for="submitButton"></label> <input id="tempSubmitButton" type="submit" value="Submit" />
+		</form>
+
+		<div id="resultsBox"></div>
+		<button id="stop">Stop</button>
+		<button id="resume">Resume</button>
+
+
+		<script async src="http://jsfiddle.net/184b2vk4/embed/html,css,result/dark/"></script>
+
+		<script async src="http://jsfiddle.net/gRzPF/409/embed/html,css,result/dark/"></script>
+
+		<!-- <script src="modernizr-custom.js"></script> -->
+		<script>
+
+			var inputFigure = document.getElementById('temp');
+			inputFigure.onblur = function(){
+				var val = this.value;
+				var errorBox = document.getElementById('error');
+
+				if(!val){
+					console.log("Please, enter a value")
+					errorBox.innerHTML = "Enter a number";
+				} else {
+					console.log(val);
+					errorBox.innerHTML = "";
+				}
+			}
+
+			var simpleClock=setInterval(myClock, 1000);
+			function myClock() {
+			    var d = new Date();
+			    var t = d.toLocaleTimeString();
+			    document.getElementById('resultsBox').innerHTML = t;
+			}
+
+			document.getElementById('stop').onclick = function(){
+				clearInterval(simpleClock);
+				toggleResume();
+				toggleStop();
+			}
+			
+			document.getElementById('resume').onclick = function(){
+				simpleClock = setInterval(myClock, 1000);
+				document.getElementById('resume').disabled = true;
+			}
+
+			function toggleStop(){
+				var stop = document.getElementById('stop');
+				if(stop.disabled = true){
+					stop.disabled = false;
+				}
+			}
+
+			function toggleResume(){
+				var resume = document.getElementById('resume');
+				if(resume.disabled = true){
+					resume.disabled = false;
+				}
+			}
+
+			toggleResume();
+
+			function calculateTip(total) {
+			    var tipPercent = 0.15; //Can be changed
+			    return (total * tipPercent);
+			}
+
+			var billPreTip = 10;
+			var billTip   = calculateTip(billPreTip);
+			var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
+			    ' Total: ' + (billPreTip + billTip);
+			console.log(receipt);
+
+			/* 				
+				Write a loop that gives you the 9's times table, from 9 x 1 = 9 to 9 x 12 = 108.
+				Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.
+			*/
+
+			var times = 1;
+			for(var i = 1; i <= 12; i++){				
+				for(var e = 1; e <= 12; e++){
+					// var sayTimes = times x e;
+					console.log(times * e);
+				}
+				times++;
+			}
+
+			if(Modernizr.csstransforms){
+				console.log("Your browser supports CSS Transforms Property");
+			}
+		</script>
+	</div>
+</body>
+</html>
