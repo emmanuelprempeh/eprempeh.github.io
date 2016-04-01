@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style type="text/css">
-		
+
 		/* Colors :
 
 		background: #eb6361
@@ -52,7 +52,7 @@
 			box-shadow: 0px 6px #4796b3;
 			position: relative;
 		}
-		
+
 		a.btn:hover{
 			box-shadow: 0px 4px #4796b3;
 			top: 2px;
@@ -86,8 +86,8 @@
 
 		<form id="temperatureForm">
 			<small id="error" style="display: block; color: red"></small>
-		    <label for="temp">Temperature:</label> <input type="text" id="temp" size="3"/> degrees in 
-		    <input type="radio" name="tempFormat" value="F" checked />Fahrenheit 
+		    <label for="temp">Temperature:</label> <input type="text" id="temp" size="3"/> degrees in
+		    <input type="radio" name="tempFormat" value="F" checked />Fahrenheit
 		    <input type="radio" name="tempFormat" value="C" />Celsius <br />
 		    <label for="submitButton"></label> <input id="tempSubmitButton" type="submit" value="Submit" />
 		</form>
@@ -103,6 +103,10 @@
 
 		<!-- <script src="modernizr-custom.js"></script> -->
 		<script>
+
+		document.getElementById("temperatureForm").onsubmit = function (e) {
+			  e.preventDefault();
+		}
 
 			var inputFigure = document.getElementById('temp');
 			inputFigure.onblur = function(){
@@ -130,7 +134,7 @@
 				toggleResume();
 				toggleStop();
 			}
-			
+
 			document.getElementById('resume').onclick = function(){
 				simpleClock = setInterval(myClock, 1000);
 				document.getElementById('resume').disabled = true;
@@ -159,17 +163,17 @@
 
 			var billPreTip = 10;
 			var billTip   = calculateTip(billPreTip);
-			var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
+			var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
 			    ' Total: ' + (billPreTip + billTip);
 			console.log(receipt);
 
-			/* 				
+			/*
 				Write a loop that gives you the 9's times table, from 9 x 1 = 9 to 9 x 12 = 108.
 				Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.
 			*/
 
 			var times = 1;
-			for(var i = 1; i <= 12; i++){				
+			for(var i = 1; i <= 12; i++){
 				for(var e = 1; e <= 12; e++){
 					// var sayTimes = times x e;
 					console.log(times * e);
@@ -177,7 +181,7 @@
 				times++;
 			}
 
-			if(Modernizr.csstransforms){
+			if (Modernizr.csstransforms) {
 				console.log("Your browser supports CSS Transforms Property");
 			}
 		</script>
