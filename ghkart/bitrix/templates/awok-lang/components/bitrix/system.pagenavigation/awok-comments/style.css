@@ -1,0 +1,60 @@
+/*modern page navigation*/
+
+.modern-page-navigation {
+    display: table;
+    table-layout: fixed;
+    margin: 0 auto 10px auto;
+}
+
+/*pagination title*/
+.modern-page-navigation .modern-page-title{
+    display: none;
+}
+
+/*pagination links*/
+.modern-page-navigation a{
+    text-decoration: none;
+}
+.modern-page-navigation .page_link{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin: 0 5px;
+}
+.modern-page-navigation .page_link:hover,
+.modern-page-navigation .modern-page-current{
+    background-color: #D71A21;
+    border: 1px solid #D71A21;
+    color: #fff;
+}
+.modern-page-navigation .modern-page-previous,
+.modern-page-navigation .modern-page-next{
+    text-indent: -9999px;
+    background-size: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.modern-page-navigation .modern-page-previous:hover,
+.modern-page-navigation .modern-page-next:hover{
+    background-color: initial;
+    border: 1px solid #ddd;
+    color: initial;
+}
+.modern-page-navigation .modern-page-previous{
+    background-image: url("images/prev-arrow.svg");
+}
+.modern-page-navigation .modern-page-next{
+    background-image: url("images/next-arrow.svg");
+}
+
+/*======================================== Arabic CSS Start ========================================*/
+.ln-ar .modern-page-navigation .modern-page-previous{
+    background-image: url("images/next-arrow.svg");
+}
+.ln-ar .modern-page-navigation .modern-page-next{
+    background-image: url("images/prev-arrow.svg");
+}
+/*======================================== Arabic CSS End ========================================*/

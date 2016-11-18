@@ -1,0 +1,52 @@
+/*breadcrums*/
+.page-home .page_breadcrums_box{
+    display                     : none;
+}
+.page_breadcrums_box {
+    width			            : 100%;
+    height     		            : 25px;
+    overflow    	            : hidden;
+    clear			            : both;
+    background		            : #F0F0F0;
+    border-top	                : solid 1px #ddd;
+	border-bottom               : solid 1px #ddd;
+}
+.page_breadcrums_box .page_breadcrums {
+    width		                : 1200px;
+    list-style	                : none;
+    padding		                : 0px;
+    margin		                : 0px auto;
+    clear		                : both;
+}
+.page_breadcrums_box .page_breadcrums li {
+    float		                : left;
+    line-height	                : 25px;
+    margin		                : 0px 10px 0px 0px;
+    color		                : #777;
+    font-size	                : 11px;
+}
+.page_breadcrums_box .page_breadcrums li a{
+    font-family	                : 'roboto' 'droid';
+    font-size	                : 11px;
+    line-height	                : 25px;
+    color		                : #777;
+    display		                : block;
+    text-decoration             : none;
+}
+.page_breadcrums_box .page_breadcrums li a:hover {
+    color		                : #ce1b1f;
+}
+.page_breadcrums_box .page_breadcrums li.active span{
+    font-family	                : 'roboto' 'droid';
+    font-size	                : 11px;
+    line-height	                : 25px;
+    color		                : #666;
+    display		                : block;
+    font-weight	                : normal;
+    text-decoration	            : none;
+}
+
+
+.ln-ar .page_breadcrums_box .page_breadcrums li {
+	float: right;
+}
