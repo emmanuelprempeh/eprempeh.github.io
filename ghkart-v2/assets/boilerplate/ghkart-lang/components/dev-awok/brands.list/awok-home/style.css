@@ -1,0 +1,63 @@
+.best_selling_brands_box .best_selling_brands_head {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    background-color: #EFEFEF;
+    border: solid 1px #DDD;
+}
+.best_selling_brands_box .best_selling_brands_head h3 { 
+    text-transform            : capitalize;
+	font-family: 'roboto-bold', 'droid-bold';
+    font-size: 18px;
+    color: #333;
+    padding: 0 10px;
+}
+
+.best_selling_brands_box .best_selling_brands_body{
+    /*border-top                :  2px solid #CACACA;*/
+	   margin-bottom: 20px;
+}
+.best_selling_brands_box .best_selling_brands_list{
+   	border-left               : 1px solid #dddddd;
+    border-top                : 0;
+}
+.best_selling_brands_box .best_selling_brands_list li{
+    width						          : 12.5%;
+  	float						          : left;
+  	background					      : #efefef;
+  	border-right				      : 1px #ddd solid;
+  	border-bottom				      : 1px #ddd solid;
+  	box-sizing					      : border-box;
+     background: #F9F9F9;
+}
+
+.best_selling_brands_box .best_selling_brands_list li .brand_img_box{
+	  display						        : table;
+  	table-layout				      : fixed;
+  	text-align					      : center;
+  	width						          : 100%;
+}
+
+.best_selling_brands_box .best_selling_brands_list li a{
+    display						        : table-cell;
+    text-align                : center;
+	  vertical-align				    : middle;
+    height                    : 80px;
+    margin-right              : -1px;
+    margin-top                : -1px;
+	  position					        : relative;
+}
+.best_selling_brands_box .best_selling_brands_list img{
+    max-width                 : 50%;
+    max-height                : 100%;
+}
+.best_selling_brands_box .best_selling_brands_list li a:hover {
+    background                : #ffffff;
+}
+
+
+@media only screen and (max-width: 1220px){
+    .best_selling_brands_box{
+        padding              : 0 15px;
+    }
+}

@@ -1,0 +1,325 @@
+/*  Highest Discounted Products  */
+/* ----------------------------- */
+
+.discount_products{
+  background-color: #FFFFFF;
+    margin: 0px 0 20px;
+    border: solid 1px #DDD;
+}
+.discount_products .discount_header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #efefef;
+	border-bottom:solid 1px #ddd;
+}
+.discount_products .discount_header .col_left{
+    height: 40px;
+    line-height: 40px;
+    width: 35%;
+    float: left;
+}
+.discount_products .discount_header .col_rigth{
+    height: 40px;
+    line-height: 40px;
+    width: 65%;
+    float: left;
+}
+.discount_products .discount_header .col_left h2{
+    font-family: 'roboto-bold', 'droid-bold';
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    padding: 0 10px;
+    float: left;
+}
+.discount_products .discount_header .col_left span{
+    font-family: 'roboto', 'droid';
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    color: #818181;
+    padding: 0 10px;
+    float: left;
+    position: relative;
+}
+.discount_products .discount_header .col_left span:after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -4px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 5px solid #a9a9a9;
+}
+.discount_products .discount_header .col_right .tabs{
+    float: right;
+}
+.discount_products .discount_header .col_right .tabs li{
+    font-family: 'roboto', 'droid';
+    font-size: 13px;
+    width: 115px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-left: solid 1px #DDD;
+    border-bottom: solid 1px #DDD;
+    position: relative;
+    cursor: pointer;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.discount_products .discount_header .col_right .tabs li.active{
+    font-family: 'roboto-bold', 'droid-bold';
+    background-color: #FFF;
+    color: #db4013;
+    height: 50px;
+    margin-top: -10px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: none;
+}
+.discount_products .discount_header .col_right .tabs li.active:after{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #db4013;
+    content: '';
+    top: -1px;
+    left: 0; 
+}
+.discount_products .products {
+    min-height: 353px;
+}
+.discount_products .toggle_loader {
+    height: 300px;
+    padding: 10px 0px;
+    background: url(/bitrix/templates/awok/images/content-loader_small.gif) no-repeat center center;
+    background-size: 50px;
+    width: 100%;
+    margin: 0px auto;
+    /* position: absolute; */
+}
+.discount_products .products .product_list li{
+    width: 20%;
+    float: left;
+    position: relative;
+    border-right: solid 1px #DDD;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.discount_products .products .product_list li:nth-child(5n+5){
+    border-right: none;
+}
+.discount_products .products .product_list li .item .offer{
+    position: absolute;
+    top:0;
+    left: 20px;
+    font-family: 'roboto-bold', 'droid-bold';
+    background-color: #db4013;
+    font-size: 13px;
+    height: 35px;
+    padding-top: 5px;
+    width: 37px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 149;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.discount_products .products .product_list li .item .offer span{
+    font-size: 11px;
+}
+.discount_products .products .product_list li .item .offer:after{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    content: '';
+    border-top: solid 8px #db4013;
+    border-left: solid 19px transparent;
+    border-right: solid 18px transparent;
+}
+.discount_products .products .product_list li .item .item_image {
+    margin: 15px 0 0 0;
+    height: 200px;
+    text-align: center;
+}
+.discount_products .products .product_list li .item .item_image .item_imageinner {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.discount_products .products .product_list li .item .item_image img {
+    width: auto !important;
+    max-height: 100% !important; 
+    vertical-align: middle;
+}
+.discount_products .products .product_list li .item .title{
+    padding: 0 20px;
+}
+.discount_products .products .product_list li .item .title span{
+    font-family: 'roboto', 'droid';
+    font-size: 13px; 
+    display: block;
+    height: 38px;
+    line-height: 18px;
+    color: #333333;
+    text-align: center;
+    overflow: hidden;
+}
+.discount_products .products .product_list li .item .price{
+    clear: both;
+    height: 60px;
+}
+.discount_products .products .product_list li .item .price .text{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: #838383;
+    padding-top: 10px;
+}
+.discount_products .products .product_list li .item .price .newprice,
+.discount_products .products .product_list li .item .price .oldprice{
+    font-family: 'roboto-bold', 'droid-bold';
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    padding: 0 5px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.discount_products .products .product_list li .item .price .newprice{
+   font-size: 16px; 
+   color: #d71a21;
+   text-align: right;
+}
+.discount_products .products .product_list li .item .price .newprice em{
+    font-style: normal;
+    font-size: 14px; 
+}
+.discount_products .products .product_list li .item .price .oldprice{
+    color: #999999;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: line-through;
+}
+.discount_products .products .product_list li .item .timer{
+    font-family: 'roboto-bold', 'droid-bold';
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    color: #565656;
+    text-align: center;
+    position: relative;
+    border-top: solid 1px #DDD;
+}
+.discount_products .products .product_list li .item .timer span.icon{
+    position: absolute;
+    width: 40px;
+    height: 39px;
+    left: 0;
+    top: 0;
+
+    background: #f3f3f3 url(images/timer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* -------------Lang Style--------------- */
+
+.ln-ar .discount_products .discount_header  .col_left,
+.ln-ar .discount_products .discount_header  .col_rigth{
+    float: right;
+}
+.ln-ar .discount_products .discount_header  .col_left h2{
+	float: right;
+}
+.ln-ar .discount_products .discount_header  .col_left span{
+	float: right;
+}
+.ln-ar .discount_products .discount_header  .col_right .tabs{
+	float: left;
+}
+.ln-ar .discount_products .discount_header  .col_right .tabs li{
+	border-right: solid 1px #DDD;
+	border-left: none;
+	float: right;
+}
+.ln-ar .discount_products .products .product_list li .item .offer{
+	right: 180px;
+}
+.ln-ar .discount_products .discount_header .col_left span:after{
+	border:none;
+}
+.ln-ar .discount_products .discount_header .col_left span:before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -4px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 5px solid #a9a9a9;
+}
+.ln-ar .discount_products .products .product_list li{
+	border-left: solid 1px #DDD;
+	border-right: none;
+	float: right;
+}
+.ln-ar .discount_products .products .product_list li:nth-child(5n+5){
+	border-left: none;
+}
+.ln-ar .discount_products .products .product_list li .item .price .newprice{
+    float: right !important;
+    text-align: left !important;
+}
+.ln-ar .discount_products .products .product_list li .item .price .oldprice{
+    float: left !important;
+    text-align: right !important;
+}
+
+
+@media all and (max-width:1200px){
+
+    .discount_products .discount_header .col_left{
+        width: 32%;   
+    }
+
+    .discount_products .discount_header .col_left h2{
+        font-size: 14px;
+    }   
+
+    .discount_products .discount_header .col_left span{
+        font-size: 11px;
+    }
+}
+
+.discount_products .discount_header .col_right .tabs li.active a{
+ color: #db4013;
+}
+.hp_slider_wrapper {
+    margin-bottom: 20px !important;
+}
